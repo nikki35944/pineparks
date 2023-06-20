@@ -23,7 +23,6 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'pineparks' ); ?></a>
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
@@ -58,6 +57,4 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<div class="container">
-		<p class="text-muted">Это текст серым цветов тест</p>
-	</div>
+	<p>A Tanzania vacation is the ultimate once-in-a-lifetime holiday! Tanzania is a top safari destination and has so much to offer.</p>

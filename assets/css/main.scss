@@ -1,10 +1,19 @@
-$text-muted: #737373;
-$bg-dark: #000;
-$bg-light: #fff;
-$primary-color: #ff33e4;
+
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+p {
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 136%;
+  color: $text-gray;
+}
 
 .text-muted {
-  color: $text-muted;
+  color: $text-gray;
 }
 
 .black {
@@ -14,7 +23,11 @@ $primary-color: #ff33e4;
 .light {
   background-color: $bg-light;
 }
+.text-white {
+  color: $white;
+}
 
-.primary {
-  color: $primary-color;
+
+.container {
+  max-width: $container-width;
 }

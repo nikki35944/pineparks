@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter.woff2") format("woff2");
+}
+/* Template colors */
+/* Site width */
+p {
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 136%;
+  color: #737373;
+}
+
 .text-muted {
   color: #737373;
 }
@@ -10,8 +25,12 @@
   background-color: #fff;
 }
 
-.primary {
-  color: #ff33e4;
+.text-white {
+  color: #fff;
+}
+
+.container {
+  max-width: 1205px;
 }
 
 /*# sourceMappingURL=main.css.map */
