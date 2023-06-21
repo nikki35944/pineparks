@@ -1,0 +1,26 @@
+
+@media screen and (max-width: $breakpoint_lg) {
+    nav a.btn.btn-black {
+      display: none;
+    }
+}
+
+@media screen and (max-width: $breakpoint-md){
+  h2 {
+    font-size: 36px;
+    line-height: 110%;
+  }
+  h3 {
+    font-size: 36px;
+    line-height: 106%;
+  }
+  nav {
+    ul {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      li {
+        margin-top: 5px;
+      }
+    }
+  }
+}

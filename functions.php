@@ -138,10 +138,12 @@ add_action( 'widgets_init', 'pineparks_widgets_init' );
  * Enqueue scripts and styles.
  */
 function pineparks_scripts() {
-	wp_enqueue_style( 'pineparks-style', get_stylesheet_uri(), array(), _S_VERSION );
-    wp_enqueue_style( 'pineparks-builded-style', get_template_directory_uri() . '/build/index.css', array(), _S_VERSION );
+    wp_enqueue_style( 'pineparks-style', get_stylesheet_uri(), array(), _S_VERSION );
+    wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), _S_VERSION );
 	wp_style_add_data( 'pineparks-style', 'rtl', 'replace' );
+    wp_enqueue_style( 'pineparks-main-style', get_template_directory_uri() . '/assets/css/main.css', array(), _S_VERSION );
 
+    wp_enqueue_script( 'pineparks-navigation', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'pineparks-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

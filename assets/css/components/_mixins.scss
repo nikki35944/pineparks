@@ -1,0 +1,10 @@
+@mixin flex-container {
+  display: flex;
+  align-items: center;
+}
+
+@mixin text-overflow() {
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
