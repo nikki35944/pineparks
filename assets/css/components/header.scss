@@ -1,0 +1,26 @@
+
+nav {
+  max-height: 60px;
+  ul {
+    margin-left: 90px;
+    li {
+      margin-right: 26px;
+      a {
+        color: $text-gray;
+      }
+      &.current_page_item {
+        color: #000;
+      }
+      &::before {
+        content: none;
+      }
+    }
+    .navbar .navbar-toggler .icon-bar {
+      background-color: #000 !important;
+    }
+  }
+  .navbar-collapse {
+    z-index: 10;
+    background-color: $light;
+  }
+}

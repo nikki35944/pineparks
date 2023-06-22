@@ -8,13 +8,18 @@
 */
 @import "components/reset";
 /*
+ * Header and footer
+*/
+@import "components/header";
+@import "components/footer";
+/*
  * Main css
 */
 @import "components/index";
 /*
  * Media queries
 */
-@import "components/media.scss";
+@import "components/media";
 
 
 

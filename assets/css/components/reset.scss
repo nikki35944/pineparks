@@ -1,5 +1,5 @@
 a:visited {
-  color: $text-dark;
+  color: unset;
 }
 a {
   color: $text-dark;
@@ -7,6 +7,9 @@ a {
 }
 a:hover {
   color: $text-dark;
+}
+p {
+  margin-bottom: 5px;
 }
 ul {
   list-style: none;
@@ -31,4 +34,23 @@ ul {
       box-shadow: none;
     }
   }
+}
+.post, .page {
+  margin: 0;
+}
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea {
+  max-width: 150px;
+  width: 100%;
+  margin-right: 10px;
+  color: $text-dark;
+  border: $border-thin-dark;
+  height: 45px;
+  padding-left: 15px;
+}
+select {
+  border: $border-thin-dark;
+  max-width: 150px;
+  margin-right: 10px;
+  width: 100%;
+  padding-left: 15px;
 }
