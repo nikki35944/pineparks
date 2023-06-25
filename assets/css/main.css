@@ -7,6 +7,15 @@
 /*
  * Reset styles
 */
+* {
+  font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 136%;
+  color: #000;
+}
+
 a:visited {
   color: unset;
 }
@@ -83,12 +92,14 @@ nav ul {
 }
 nav ul li {
   margin-right: 26px;
+  color: #737373;
 }
 nav ul li a {
   color: #737373;
 }
 nav ul li.current_page_item {
   color: #000;
+  font-weight: bold;
 }
 nav ul li::before {
   content: none;
@@ -141,13 +152,22 @@ footer .footer-menu-heading {
 /*
  * Main css
 */
-* {
-  font-family: "Inter", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 136%;
-  color: #000;
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#page {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex: 0 0 auto;
 }
 
 h2 {
@@ -280,6 +300,34 @@ section ul li::before {
   margin-top: 30px;
 }
 
+section.accordion {
+  background-color: #F8F8F8;
+  margin-top: 0;
+  padding: 80px 0;
+}
+section.accordion .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 12H18' stroke='%23292D32' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 18V6' stroke='%23292D32' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+section.accordion .accordion-button {
+  padding: 5px 15px;
+  font-size: 24px;
+  color: #737373;
+}
+section.accordion .accordion-button[aria-expanded=true] {
+  color: #000;
+}
+section.accordion .accordion-button,
+section.accordion .accordion-collapse {
+  background-color: #F8F8F8;
+  color: #737373;
+}
+section.accordion .accordion-button:focus {
+  box-shadow: none;
+}
+section.accordion .accordion-button[aria-expanded=true]::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 12H18' stroke='%23292D32' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
 /*
  * Media queries
 */
@@ -296,17 +344,6 @@ section ul li::before {
     display: none;
   }
 }
-@media screen and (max-width: 767px) {
-  .hide-md {
-    display: none;
-  }
-  .show-md {
-    display: block !important;
-  }
-  .text-image .group-items {
-    margin-bottom: 30px;
-  }
-}
 @media screen and (min-width: 767px) {
   .text-image .group-items {
     margin-left: 100px;
@@ -319,6 +356,15 @@ section ul li::before {
   h3 {
     font-size: 30px;
     line-height: 106%;
+  }
+  .hide-md {
+    display: none;
+  }
+  .show-md {
+    display: block !important;
+  }
+  .text-image .group-items {
+    margin-bottom: 30px;
   }
   nav ul {
     margin-top: 15px;
@@ -350,6 +396,13 @@ section ul li::before {
     left: 0;
     right: 0;
     bottom: 0;
+  }
+  section .accordion {
+    margin-top: 45px;
+  }
+  footer .btn {
+    max-width: 400px;
+    width: 100%;
   }
 }
 

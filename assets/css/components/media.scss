@@ -13,20 +13,6 @@
   }
 }
 
-@media screen and (max-width: $breakpoint-md) {
-  .hide-md {
-    display: none;
-  }
-  .show-md {
-    display: block !important;
-  }
-  .text-image {
-    .group-items {
-      margin-bottom: 30px;
-    }
-  }
-}
-
 @media screen and (min-width: $breakpoint-md) {
   .text-image {
     .group-items {
@@ -42,6 +28,17 @@
   h3 {
     font-size: 30px;
     line-height: 106%;
+  }
+  .hide-md {
+    display: none;
+  }
+  .show-md {
+    display: block !important;
+  }
+  .text-image {
+    .group-items {
+      margin-bottom: 30px;
+    }
   }
   nav {
     ul {
@@ -76,7 +73,6 @@
         margin-top: 0;
       }
     }
-
     .controls-container .group-controls {
       margin-right: auto;
       margin-left: auto;
@@ -85,10 +81,17 @@
       bottom: 0;
     }
   }
+  section .accordion {
+    margin-top: 45px;
+  }
+  footer {
+    .btn {
+      max-width: 400px;
+      width: 100%;
+    }
+  }
 }
 
 @media screen and (max-width: $breakpoint-sm) {
-  footer {
 
-  }
 }

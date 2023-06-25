@@ -5,11 +5,13 @@ nav {
     margin-left: 90px;
     li {
       margin-right: 26px;
+      color: $text-gray;
       a {
         color: $text-gray;
       }
       &.current_page_item {
         color: #000;
+        font-weight: bold;
       }
       &::before {
         content: none;
