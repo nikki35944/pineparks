@@ -42,15 +42,42 @@
   }
   nav {
     ul {
-      margin-top: 15px;
+      margin-left: 0;
+      margin-top: 50px;
       margin-bottom: 15px;
 
       li {
-        margin-top: 5px;
+        margin-top: 25px;
+        margin-right: 0;
+        text-align: center;
+        a {
+          font-size: 16px;
+        }
       }
     }
     .navbar-collapse {
       padding-bottom: 15px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 280px; /*example + never use min-width with this solution */
+      height: 100%;
+      .btn {
+        max-width: 150px;
+        margin: 0 auto;
+        margin-top: 50px;
+      }
+    }
+    .close .navbar-toggler-icon {
+      background-image: $cross-icon-svg;
+      transition: transform .2s ease-in-out;
+      transform: rotate(-135deg);
+    }
+    .navbar-toggler {
+      z-index: 15;
+      .navbar-toggler-icon {
+        font-size: 18px;
+      }
     }
   }
   .carousel {

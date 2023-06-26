@@ -9,7 +9,7 @@ nav {
       a {
         color: $text-gray;
       }
-      &.current_page_item {
+      &.current_page_item a {
         color: #000;
         font-weight: bold;
       }

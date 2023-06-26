@@ -102,17 +102,17 @@ get_header();
                     </div>
                     <div class="calculator">
                         <p>Vacation calculator</p>
-                        <div class="d-flex flex-row-sm">
-                            <input type="text">
-                            <select name="operations" id="operations-select">
-                                <option value="+">+</option>
-                                <option value="-">-</option>
-                                <option value="*">*</option>
-                                <option value="/">/</option>
-                            </select>
-                            <input type="text">
-                        </div>
-                        <p class="mt-15">Result: <span class="result"></span></p>
+                            <form id="form_calculator" class="d-flex flex-row-sm">
+                                <input type="text" name="first_number">
+                                <select name="operations">
+                                    <option value="+">+</option>
+                                    <option value="-">-</option>
+                                    <option value="*">*</option>
+                                    <option value="/">/</option>
+                                </select>
+                                <input type="text" name="second_number">
+                            </form>
+                        <p class="mt-15">Result: <span id="result"></span></p>
                     </div>
                 </div>
             </div>
