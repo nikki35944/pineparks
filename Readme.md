@@ -1,4 +1,4 @@
-# Pineparks Test Case
+# Pineparks Test Task
 
 [https://rnd.webkit.site/](https://rnd.webkit.site/)
 
