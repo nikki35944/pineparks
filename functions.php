@@ -12,6 +12,17 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
+
+/**
+ * Installs plugins after theme activation
+ */
+require get_template_directory() . '/inc/plugins-installation/install.php';
+
+/**
+ * Advanced custom fields settings import
+ */
+require get_template_directory() . '/inc/acf-data-import.php';
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
