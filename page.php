@@ -25,31 +25,34 @@ get_header();
                     <div class="carousel-item <?php if ($i == 1) echo 'active'; ?>">
                         <img src="<?= get_sub_field('slider-image'); ?>" class="d-block w-100">
                         <div class="carousel-caption">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="items-container">
-                                        <h2 class="text-white"><?= get_sub_field('slider_heading_2_text'); ?></h2>
-                                        <p class="text-white">
-                                            <?= get_sub_field('slide_description'); ?>
-                                        </p>
-                                        <a href="<?= get_sub_field('slider_button_link'); ?>" class="btn btn-white">Book a tour</a>
-                                        <ul>
-                                            <?php while(have_rows('unordered-list')): the_row(); ?>
-                                            <li><?= get_sub_field('slider_ul_text_item') ?></li>
-                                            <?php endwhile; ?>
-                                        </ul>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="items-container">
+                                            <h2 class="text-white"><?= get_sub_field('slider_heading_2_text'); ?></h2>
+                                            <p class="text-white">
+                                                <?= get_sub_field('slide_description'); ?>
+                                            </p>
+                                            <a href="<?= get_sub_field('slider_button_link'); ?>" class="btn btn-white">Book a tour</a>
+                                            <ul>
+                                                <?php while(have_rows('unordered-list')): the_row(); ?>
+                                                    <li><?= get_sub_field('slider_ul_text_item') ?></li>
+                                                <?php endwhile; ?>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 <?php endwhile; ?>
                 </div>
                 <div class="controls-container">
                     <div class="carousel-indicators display-xl">
-                    <?php $i = 0; while(have_rows('slider_block')): the_row(); $i++; ?>
+                    <?php $i = 1; ?>
+                        <span>0<?= $i ?></span>
+                    <?php while(have_rows('slider_block')): the_row(); ?>
                         <button type="button" data-bs-target="#carouselFade" data-bs-slide-to="<?= $i-1; ?>" <?php if ($i == 1) echo 'class="active" aria-current="true"' ?> aria-label="Slide <?= $i; ?>"></button>
-                    <?php endwhile; ?>
+                    <?php $i++; endwhile; ?>
+                        <span>0<?= $i-1; ?></span>
                     </div>
                     <div class="group-controls">
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselFade" data-bs-slide="prev">

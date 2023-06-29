@@ -175,7 +175,7 @@ footer {
 h2 {
   font-style: normal;
   font-weight: 700;
-  font-size: 45px;
+  font-size: 58px;
   line-height: 110%;
 }
 
@@ -262,8 +262,8 @@ section ul li::before {
 .carousel .carousel-caption {
   text-align: unset;
   bottom: unset;
-  top: 50px;
-  left: 13%;
+  top: 130px;
+  left: 19%;
 }
 .carousel .carousel-caption p {
   max-width: 400px;
@@ -272,7 +272,7 @@ section ul li::before {
 .carousel .controls-container .carousel-indicators {
   flex-direction: column;
   top: -270px;
-  right: 13%;
+  right: 19%;
   left: unset;
   margin: 0;
 }
@@ -282,12 +282,22 @@ section ul li::before {
   margin: 0;
   background-clip: border-box;
 }
+.carousel .controls-container .carousel-indicators span {
+  color: #fff;
+  margin-left: -7px;
+}
+.carousel .controls-container .carousel-indicators span:first-child {
+  margin-bottom: 14px;
+}
+.carousel .controls-container .carousel-indicators span:last-child {
+  margin-top: 14px;
+}
 .carousel .controls-container .group-controls {
   position: absolute;
   height: 100px;
   width: 100px;
-  bottom: 50px;
-  right: 12%;
+  bottom: 150px;
+  right: 18.5%;
 }
 .carousel .controls-container .group-controls .carousel-control-next, .carousel .controls-container .group-controls .carousel-control-prev {
   width: 40px;
@@ -333,12 +343,17 @@ section.accordion .accordion-button[aria-expanded=true]::after {
 /*
  * Media queries
 */
+@media screen and (max-width: 1200px) {
+  h2 {
+    font-size: 45px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .display-xl {
     display: none;
   }
   h2 {
-    font-size: 30px;
+    font-size: 36px;
   }
 }
 @media screen and (max-width: 992px) {
@@ -356,7 +371,7 @@ section.accordion .accordion-button[aria-expanded=true]::after {
     font-size: 14px;
   }
   h3 {
-    font-size: 30px;
+    font-size: 36px;
     line-height: 106%;
   }
   .hide-md {
@@ -364,6 +379,9 @@ section.accordion .accordion-button[aria-expanded=true]::after {
   }
   .show-md {
     display: block !important;
+  }
+  .btn {
+    margin: 25px 0;
   }
   .text-image .group-items {
     margin-bottom: 30px;
@@ -405,6 +423,11 @@ section.accordion .accordion-button[aria-expanded=true]::after {
   nav .navbar-toggler .navbar-toggler-icon {
     font-size: 18px;
   }
+  .carousel .carousel-caption {
+    top: 55px;
+    left: unset;
+    right: unset;
+  }
   .carousel .carousel-caption .items-container {
     display: flex;
     flex-direction: column;
@@ -425,6 +448,9 @@ section.accordion .accordion-button[aria-expanded=true]::after {
     left: 0;
     right: 0;
     bottom: 0;
+  }
+  section.text-image .text-big {
+    margin-top: 25px;
   }
   section .accordion {
     margin-top: 45px;
